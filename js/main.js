@@ -2,27 +2,35 @@
 // geef de vis een random positie en een random kleur
 //
 //let fishes = document.getElementsByTagName("fish")
+//let fish = fishes[0]
 
 let fishes = document.createElement("fish")
 document.body.appendChild(fishes)
-//
-//let fish = fishes[0]
-//fish.style.left = "200px"
-//fish.style.top = "100px"
-//fish.style.webkitFilter = "hue-rotate(200deg)"
-//fish.style.filter = "hue-rotate(200deg)"
+let bubbles = document.createElement("bubble")
+document.body.appendChild(bubbles)
+
+let screenSizeHeight = window.innerHeight*0.8
+let randomNumber2 = Math.random() * screenSizeHeight
+
+let screenSize = window.innerWidth*0.9
+let randomNumber = Math.random() * screenSize
+
+let screenSizeBubble = window.innerWidth*0.9
+let randomNumberBubble = Math.random() * screenSize
+
+fishes.style.left = randomNumber + "px"
+fishes.style.top = randomNumber2 + "px"
+fishes.style.webkitFilter = "hue-rotate(300deg)"
+fishes.style.filter = "hue-rotate(300deg)"
 
 //
 // geef de bubble een random positie
 //
 //let bubbles = document.getElementsByTagName("bubble")
-
-let bubbles = document.createElement("bubble")
-document.body.appendChild(bubbles)
-
 //let bubble = bubbles[0]
-//bubble.style.left = "200px"
-//bubble.style.top = "0px"
+
+bubbles.style.left = randomNumberBubble + "px"
+bubbles.style.top = "0px"
 
 //
 // roep een functie aan als alles geladen is
