@@ -4,24 +4,29 @@
 //let fishes = document.getElementsByTagName("fish")
 //let fish = fishes[0]
 
-let fishes = document.createElement("fish")
-document.body.appendChild(fishes)
+let fishes = "";
 let bubbles = document.createElement("bubble")
 document.body.appendChild(bubbles)
 
-let screenSizeHeight = window.innerHeight*0.8
-let randomNumber2 = Math.random() * screenSizeHeight
+var i;
+for (i = 0; i < 100; i++) { 
+    let fishes = document.createElement("fish")
+    document.body.appendChild(fishes)
+    
+    let screenSizeHeight = window.innerHeight*0.8
+    let randomNumber2 = Math.random() * screenSizeHeight
 
-let screenSize = window.innerWidth*0.9
-let randomNumber = Math.random() * screenSize
+    let screenSize = window.innerWidth*0.9
+    let randomNumber = Math.random() * screenSize
 
-let screenSizeBubble = window.innerWidth*0.9
-let randomNumberBubble = Math.random() * screenSize
+    let screenSizeBubble = window.innerWidth*0.9
+    let randomNumberBubble = Math.random() * screenSize
 
-fishes.style.left = randomNumber + "px"
-fishes.style.top = randomNumber2 + "px"
-fishes.style.webkitFilter = "hue-rotate(300deg)"
-fishes.style.filter = "hue-rotate(300deg)"
+    fishes.style.left = randomNumber + "px"
+    fishes.style.top = randomNumber2 + "px"
+    fishes.style.webkitFilter = "hue-rotate(300deg)"
+    fishes.style.filter = "hue-rotate(300deg)"
+}
 
 //
 // geef de bubble een random positie
@@ -39,3 +44,6 @@ bubbles.style.top = "0px"
 window.addEventListener("load", function () {
     console.log("start het aquarium")
 })
+
+
+
