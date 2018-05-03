@@ -8,10 +8,10 @@
 
 var i;
 for (i = 0; i < 20; i++) { 
-    setTimeout(foo, 1000);
-}
-
-    function foo() {
+//    setTimeout(foo, 1000);
+//}
+//
+//    function foo() {
         let screenSize = window.innerWidth
         let randomNumber = Math.random() * screenSize * 0.9
     
@@ -20,15 +20,15 @@ for (i = 0; i < 20; i++) {
         
         let randomNumber3 = Math.random() * 360
 
- //   setTimeout(function(i){
+  //  setTimeout(function(){
         let fishes = document.createElement("fish")
+  //  }, 2000);
         document.body.appendChild(fishes)
     
         fishes.style.left = randomNumber + "px"
         fishes.style.top = randomNumber2 + "px"
         fishes.style.webkitFilter = "hue-rotate(" + randomNumber3 + "deg)"
         fishes.style.filter = "hue-rotate(" + randomNumber3 + "deg)";
-   // }, 2000, i);
     }
 
 //
@@ -38,7 +38,7 @@ for (i = 0; i < 20; i++) {
 //let bubble = bubbles[0]
 
 var b;
-for (b = 0; b < 20; b++) { 
+for (b = 0; b < 100; b++) { 
     let screenSizeBubble = window.innerWidth * 0.9
     let randomNumberBubble = Math.random() * screenSizeBubble
     
