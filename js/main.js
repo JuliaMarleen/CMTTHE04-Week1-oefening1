@@ -5,24 +5,31 @@
 //let fish = fishes[0]
 
 //let fishes = "";
+
 var i;
 for (i = 0; i < 20; i++) { 
-    let screenSize = window.innerWidth
-    let randomNumber = Math.random() * screenSize * 0.9
-    
-    let screenSizeHeight = window.innerHeight
-    let randomNumber2 = Math.random() * screenSizeHeight * 0.8
-    
-    let randomNumber3 = Math.random() * 360
-    
-    let fishes = document.createElement("fish")
-    document.body.appendChild(fishes)
-    
-    fishes.style.left = randomNumber + "px"
-    fishes.style.top = randomNumber2 + "px"
-    fishes.style.webkitFilter = "hue-rotate(" + randomNumber3 + "deg)"
-    fishes.style.filter = "hue-rotate(" + randomNumber3 + "deg)"
+    setTimeout(foo, 1000);
 }
+
+    function foo() {
+        let screenSize = window.innerWidth
+        let randomNumber = Math.random() * screenSize * 0.9
+    
+        let screenSizeHeight = window.innerHeight
+        let randomNumber2 = Math.random() * screenSizeHeight * 0.8
+        
+        let randomNumber3 = Math.random() * 360
+
+ //   setTimeout(function(i){
+        let fishes = document.createElement("fish")
+        document.body.appendChild(fishes)
+    
+        fishes.style.left = randomNumber + "px"
+        fishes.style.top = randomNumber2 + "px"
+        fishes.style.webkitFilter = "hue-rotate(" + randomNumber3 + "deg)"
+        fishes.style.filter = "hue-rotate(" + randomNumber3 + "deg)";
+   // }, 2000, i);
+    }
 
 //
 // geef de bubble een random positie
@@ -51,4 +58,5 @@ for (b = 0; b < 20; b++) {
 window.addEventListener("load", function () {
     console.log("start het aquarium")
 })
+
 
