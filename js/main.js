@@ -6,12 +6,11 @@
 
 //let fishes = "";
 
-var i;
-for (i = 0; i < 20; i++) { 
-//    setTimeout(foo, 1000);
-//}
-//
-//    function foo() {
+let i;
+for (let i = 0; i < 20; i++) { 
+    (function (i) {
+    setTimeout(function () {
+    
         let screenSize = window.innerWidth
         let randomNumber = Math.random() * screenSize * 0.9
     
@@ -20,16 +19,17 @@ for (i = 0; i < 20; i++) {
         
         let randomNumber3 = Math.random() * 360
 
-  //  setTimeout(function(){
         let fishes = document.createElement("fish")
-  //  }, 2000);
         document.body.appendChild(fishes)
+    
     
         fishes.style.left = randomNumber + "px"
         fishes.style.top = randomNumber2 + "px"
         fishes.style.webkitFilter = "hue-rotate(" + randomNumber3 + "deg)"
         fishes.style.filter = "hue-rotate(" + randomNumber3 + "deg)";
-    }
+    }, 1000*i);
+  })(i);
+}
 
 //
 // geef de bubble een random positie
@@ -39,17 +39,21 @@ for (i = 0; i < 20; i++) {
 
 var b;
 for (b = 0; b < 100; b++) { 
-    let screenSizeBubble = window.innerWidth * 0.9
-    let randomNumberBubble = Math.random() * screenSizeBubble
+    (function (i) {
+    setTimeout(function () {
+        let screenSizeBubble = window.innerWidth * 0.9
+        let randomNumberBubble = Math.random() * screenSizeBubble
     
-    let screenSizeBubbleHeight = window.innerWidth * 0.9
-    let randomNumberBubbleHeight = Math.random() * screenSizeBubbleHeight
+        let screenSizeBubbleHeight = window.innerWidth * 0.9
+        let randomNumberBubbleHeight = Math.random() * screenSizeBubbleHeight
     
-    let bubbles = document.createElement("bubble")
-    document.body.appendChild(bubbles)
+        let bubbles = document.createElement("bubble")
+        document.body.appendChild(bubbles)
 
-    bubbles.style.left = randomNumberBubble + "px"
-    bubbles.style.top = randomNumberBubbleHeight + "px"
+        bubbles.style.left = randomNumberBubble + "px"
+        bubbles.style.top = randomNumberBubbleHeight + "px"
+    }, 1000*i);
+  })(i);
 }
 //
 // roep een functie aan als alles geladen is
